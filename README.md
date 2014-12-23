@@ -14,8 +14,8 @@ The client library provides API support to register on the bus and communicate
 with other components. The hub provides a central clearinghouse for all
 communication. Utilities for monitoring and debugging the bus are included.
 
-How to Build on Linux
-=====================
+How to Build on Unix
+====================
 
 ## Dependencies
 
@@ -23,12 +23,12 @@ Below are the tools and libraries (and their minimum versions) required to build
 _luna-service2_:
 
 * cmake (version required by openwebos/cmake-modules-webos)
-* gcc 4.7.0
+* gcc 4.7.0 or clang
 * glib-2.0 2.32.1
 * make (any version)
-* openwebos/cmake-modules-webos 1.0.0 RC7
-* openwebos/libpbnjson 2.5.0
-* openwebos/PmLogLib 3.0.2
+* freewebos/cmake-modules-webos 1.0.0 RC7
+* freewebos/libpbnjson 2.5.0
+* freewebos/PmLogLib 3.0.2
 * pkg-config 0.26
 
 ## Building
