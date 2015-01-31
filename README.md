@@ -22,7 +22,7 @@ How to Build on Unix
 Below are the tools and libraries (and their minimum versions) required to build
 _luna-service2_:
 
-* cmake (version required by openwebos/cmake-modules-webos)
+* cmake (version required by freewebos/cmake-modules-webos)
 * gcc 4.7.0 or clang
 * glib-2.0 2.32.1
 * make (any version)
@@ -30,6 +30,9 @@ _luna-service2_:
 * freewebos/libpbnjson 2.5.0
 * freewebos/PmLogLib 3.0.2
 * pkg-config 0.26
+
+## To do
+* Enable malloc debug. Currently it is disabled, bacause it depends on mallinfo
 
 ## Building
 

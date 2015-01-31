@@ -24,7 +24,9 @@
 #include "base.h"
 
 #define SUBSCRIPTION_DEBUG
+#ifndef __FreeBSD__ // Depends on mallinfo, no solution yet
 #define MALLOC_DEBUG
+#endif
 #define INTROSPECTION_DEBUG
 
 #ifdef SUBSCRIPTION_DEBUG
