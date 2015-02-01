@@ -43,16 +43,30 @@ set(SOURCE
 
 set(SOURCE_TEST ${SOURCE})
 
-set(LIBRARIES
-    ${GLIB2_LDFLAGS}
-    ${GTHREAD2_LDFLAGS}
-    ${CJSON_LDFLAGS}
-    ${PBNJSON_C_LDFLAGS}
-    ${PMLOGLIB_LDFLAGS}
-    dl
-    pthread
-    rt
-    )
+# Linker libraries are target spesific
+if(${CMAKE_SYSTEM_NAME} MATCHES "FreeBSD")
+    set(LIBRARIES
+        ${GLIB2_LDFLAGS}
+        ${GTHREAD2_LDFLAGS}
+        ${CJSON_LDFLAGS}
+        ${PBNJSON_C_LDFLAGS}
+        ${PMLOGLIB_LDFLAGS}
+        # FreeBSD linker does not need -ldl switch
+        pthread
+        rt
+        )
+else()
+    set(LIBRARIES
+        ${GLIB2_LDFLAGS}
+        ${GTHREAD2_LDFLAGS}
+        ${CJSON_LDFLAGS}
+        ${PBNJSON_C_LDFLAGS}
+        ${PMLOGLIB_LDFLAGS}
+        dl
+        pthread
+        rt
+        )
+endif()
 
 add_definitions(-DDEFAULT_HUB_LOCAL_SOCKET_DIRECTORY="${WEBOS_INSTALL_RUNTIMEINFODIR}/luna-service2")
 
