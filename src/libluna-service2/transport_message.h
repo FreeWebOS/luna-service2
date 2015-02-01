@@ -26,10 +26,14 @@
 
 #include "transport_shm.h"
 
+#ifdef __clang__
+#define INLINE
+#else
 #ifdef LUNA_SERVICE_UNIT_TEST
 #define INLINE
 #else
 #define INLINE inline
+#endif
 #endif
 
 /**

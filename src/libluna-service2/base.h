@@ -87,7 +87,11 @@ do {                                                                \
 
 #define LSHANDLE_VALIDATE(sh) _lshandle_validate(sh)
 
+#ifdef __clang__
+void _lshandle_validate(LSHandle *sh);
+#else
 inline void _lshandle_validate(LSHandle *sh);
+#endif
 
 #define LSHANDLE_GET_RETURN_ADDR() (__builtin_return_address(0))
 #define LSHANDLE_POISON(sh) memset(sh, 0xFF, offsetof(LSHandle, history))

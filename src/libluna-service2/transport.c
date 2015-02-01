@@ -23,6 +23,9 @@
 #include <sys/types.h>
 #include <sys/un.h>
 #include <sys/socket.h>
+#ifdef __FreeBSD__
+#include <netinet/in.h>
+#endif
 #include <netinet/ip.h>
 #include <arpa/inet.h>
 #include <pthread.h>
