@@ -23,6 +23,9 @@
 #include <errno.h>
 #include <signal.h>
 #include <sys/socket.h>
+#ifdef __FreeBSD__
+#include <netinet/in.h>
+#endif
 #include <netinet/ip.h>
 #include <sys/types.h>
 #include <arpa/inet.h>
