@@ -16,6 +16,10 @@
 #
 # LICENSE@@@
 
+if(${CMAKE_SYSTEM_NAME} MATCHES "FreeBSD")
+set(EXTRA_LIBS inotify)
+endif() 
+
 set(HUB_SOURCE_FILES
     conf.c
     pattern.c
@@ -35,7 +39,7 @@ add_definitions(-DDEFAULT_LOCAL_SOCKET_DIR="${WEBOS_INSTALL_RUNTIMEINFODIR}/ls2"
 add_library(ls-hublib STATIC ${HUB_SOURCE_FILES})
 
 add_executable(ls-hubd hub.c)
-target_link_libraries(ls-hubd ls-hublib ${CMAKE_PROJECT_NAME} ${PMLOGLIB_LDFLAGS})
+target_link_libraries(ls-hubd ls-hublib ${EXTRA_LIBS} ${CMAKE_PROJECT_NAME} ${PMLOGLIB_LDFLAGS})
 webos_build_daemon(NAME ls-hubd LAUNCH ${CMAKE_SOURCE_DIR}/files/launch/ ${LS2_RESTRICTED})
 
 if (WEBOS_CONFIG_BUILD_TESTS)
