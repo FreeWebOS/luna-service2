@@ -33,6 +33,7 @@ _luna-service2_:
 
 ## To do
 * Enable malloc debug. Currently it is disabled, bacause it depends on mallinfo
+* JEnable tests. Testing depends on Google Test, but seems to be using a custom version of the library.
 
 ## Building
 
