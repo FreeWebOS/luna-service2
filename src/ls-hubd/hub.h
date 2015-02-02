@@ -31,7 +31,7 @@ bool ParseServiceDirectory(const char *path, LSError *lserror, bool isVolatileDi
 bool SetupSignalHandler(int signal, void (*handler)(int));
 bool LSHubSendConfScanCompleteSignal(void);
 
-typedef struct _Service _Service;
+typedef struct Struct_Service _Service;
 _Service* ServiceMapLookup(const char *service_name);
 
 #endif  /* _HUB_H */

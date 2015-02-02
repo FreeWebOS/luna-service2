@@ -246,7 +246,7 @@ typedef struct _LSTransportClientMap {
     GHashTable *map;
 } _LSTransportClientMap;
 
-typedef struct _Service {
+struct Struct_Service {
     int ref;                    /**< ref count */
     char **service_names;       /**< names of services provided (currently only
                                      support one service) */
@@ -262,7 +262,7 @@ typedef struct _Service {
     char *service_file_dir;     /**< directory where the service file for this service lives */
     char *service_file_name;    /**< file name of the service file for this service */
     bool from_volatile_dir;     /**< service was added from volatile directory*/
-} _Service;                     /**< struct representing a dynamic service */
+};                     /**< struct representing a dynamic service */
 
 static void _LSHubCleanupSocketLocal(const char *unique_name);
 static bool _LSHubRemoveClientSignals(_LSTransportClient *client);

@@ -179,6 +179,7 @@ _LSTransportCredGetCmdLine(const _LSTransportCred *cred)
     return cred->cmd_line;
 }
 
+#if 0 // Nothing is using this
 /**
  *******************************************************************************
  * @brief Get the executable path for a given pid.
@@ -237,7 +238,9 @@ cleanup:
 
     return ret;
 }
+#endif
 
+#if 0 // Nothing is using this
 /**
  *******************************************************************************
  * @brief Get the command line for a given pid.
@@ -292,6 +295,7 @@ cleanup:
 
     return cmd_line;
 }
+#endif
 
 /**
  *******************************************************************************

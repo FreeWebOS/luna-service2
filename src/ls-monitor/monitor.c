@@ -103,7 +103,7 @@ static _LSMonitorQueue *private_queue = NULL;
 
 /* time1 - time2 */
 double
-_LSMonitorTimeDiff(const struct timespec const *time1, const struct timespec const *time2)
+_LSMonitorTimeDiff(struct timespec const *time1, struct timespec const *time2)
 {
     double diff_time;
 

@@ -194,7 +194,7 @@ static jschema_ref prepare_schema(jvalue_ref schema_value, jvalue_ref defs, LSEr
     LS_ASSERT(orig_defs == NULL || mixed_defs != NULL);
 
     /* mix defs into original schema */
-    jvalue_ref mixed_schema_value;
+    jvalue_ref mixed_schema_value = NULL;
     if (mixed_defs != NULL)
     {
         mixed_schema_value = jvalue_shallow(schema_value);
