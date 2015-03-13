@@ -25,6 +25,10 @@
 #include <gtest/gtest.h>
 #include <luna-service2/lunaservice.hpp>
 
+#ifdef __FreeBSD__
+#include <sys/wait.h>
+#endif
+
 using namespace std;
 
 atomic_uint g_disc_count{0};

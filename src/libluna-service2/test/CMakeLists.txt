@@ -21,7 +21,7 @@ set(UNIT_TEST_SOURCES
     test_base
     test_callmap
     test_clock
-    test_debug_methods
+# TODO    test_debug_methods
     test_mainloop
     test_message
     test_subscription

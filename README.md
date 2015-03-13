@@ -30,10 +30,11 @@ _luna-service2_:
 * freewebos/libpbnjson 2.5.0
 * freewebos/PmLogLib 3.0.2
 * pkg-config 0.26
+* devel/inotify for intofy functionality
 
 ## To do
 * Enable malloc debug. Currently it is disabled, bacause it depends on mallinfo
-* JEnable tests. Testing depends on Google Test, but seems to be using a custom version of the library.
+* Work on test failures
 
 ## Building
 
@@ -70,6 +71,11 @@ To configure for a debug build treating warnings as errors, enter:
 To see a list of the make targets that `cmake` has generated, enter:
 
     $ make help
+
+### Enable tests
+
+Add set WEBOS_CONFIG_BUILD_TESTS cmake varibale to true, like so:
+    $ cmake -D WEBOS_CONFIG_BUILD_TESTS=TRUE ..
 
 ## Uninstalling
 
