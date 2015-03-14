@@ -42,7 +42,7 @@ set(UNIT_TEST_SOURCES
 
 foreach (TEST ${UNIT_TEST_SOURCES})
     add_executable(${TEST} ${TEST}.c)
-    target_link_libraries(${TEST} ${LIBRARIES} ${TESTLIBNAME})
+    target_link_libraries(${TEST} ${LIBRARIES} ${TESTLIBNAME} ${PBNJSON_C_LDFLAGS})
     add_test(${TEST} ${TEST})
 endforeach ()
 
