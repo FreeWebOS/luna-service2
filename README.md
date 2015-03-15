@@ -74,7 +74,8 @@ To see a list of the make targets that `cmake` has generated, enter:
 
 ### Enable tests
 
-Add set WEBOS_CONFIG_BUILD_TESTS cmake varibale to true, like so:
+Set WEBOS_CONFIG_BUILD_TESTS cmake varibale to true, like this:
+
     $ cmake -D WEBOS_CONFIG_BUILD_TESTS=TRUE ..
 
 ## Uninstalling
